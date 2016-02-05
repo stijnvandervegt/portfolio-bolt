@@ -1,0 +1,348 @@
+[
+    {
+        "name": "bolt/boltforms",
+        "version": "v2.5.1",
+        "version_normalized": "2.5.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/bolt/boltforms.git",
+            "reference": "7e83b3d0cb0715c3b3ba35e507aae3bcae3d3325"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/bolt/boltforms/zipball/7e83b3d0cb0715c3b3ba35e507aae3bcae3d3325",
+            "reference": "7e83b3d0cb0715c3b3ba35e507aae3bcae3d3325",
+            "shasum": ""
+        },
+        "require": {
+            "bolt/bolt": ">=2.1.0,<3.0.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "^4.7"
+        },
+        "suggest": {
+            "rossriley/formeditor": "A UI editor for form configuration."
+        },
+        "time": "2015-12-26 06:32:05",
+        "type": "bolt-extension",
+        "extra": {
+            "bolt-assets": "css",
+            "bolt-icon": "assets/icon-boltforms.png",
+            "branch-alias": {
+                "dev-master": "2.3.*-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "files": [
+                "init.php"
+            ],
+            "psr-4": {
+                "Bolt\\Extension\\Bolt\\BoltForms\\": [
+                    "",
+                    "src/"
+                ],
+                "ReCaptcha\\": "lib/ReCaptcha/"
+            }
+        },
+        "autoload-dev": {
+            "psr-4": {
+                "Bolt\\Extension\\Bolt\\BoltForms\\Tests\\": "tests/",
+                "Bolt\\Tests\\": "vendor/bolt/bolt/tests/phpunit/unit/"
+            }
+        },
+        "license": [
+            "GPL-3.0+"
+        ],
+        "authors": [
+            {
+                "name": "Gawain Lynch",
+                "email": "gawain.lynch@gmail.com"
+            }
+        ],
+        "description": "Symfony Forms API for bolt",
+        "keywords": [
+            "comments",
+            "contact",
+            "forms",
+            "reCaptcha",
+            "uploads"
+        ],
+        "support": {
+            "source": "https://github.com/bolt/boltforms/tree/v2.5.1",
+            "issues": "https://github.com/bolt/boltforms/issues"
+        }
+    },
+    {
+        "name": "bobdenotter/seo",
+        "version": "v0.9.12",
+        "version_normalized": "0.9.12.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/bobdenotter/seo.git",
+            "reference": "b391c66d8de3cc25803779dedab74a0c803f792d"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/bobdenotter/seo/zipball/b391c66d8de3cc25803779dedab74a0c803f792d",
+            "reference": "b391c66d8de3cc25803779dedab74a0c803f792d",
+            "shasum": ""
+        },
+        "require": {
+            "bolt/bolt": ">=2.1.0,<4.0.0"
+        },
+        "time": "2016-01-28 17:44:57",
+        "type": "bolt-extension",
+        "extra": {
+            "bolt-assets": "assets"
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "files": [
+                "init.php"
+            ],
+            "psr-4": {
+                "Bolt\\Extension\\BobdenOtter\\Seo\\": ""
+            }
+        },
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Bob den Otter",
+                "email": "bob@twokings.nl"
+            }
+        ],
+        "description": "An extension to easily manage SEO title, meta description and OG tags.",
+        "support": {
+            "source": "https://github.com/bobdenotter/seo/tree/v0.9.12",
+            "issues": "https://github.com/bobdenotter/seo/issues"
+        }
+    },
+    {
+        "name": "bolt/jsonapi",
+        "version": "2.0.1",
+        "version_normalized": "2.0.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/xiaohutai/jsonapi.git",
+            "reference": "5c339da0b3979b45dc393bf87384a1b5600b2b12"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/xiaohutai/jsonapi/zipball/5c339da0b3979b45dc393bf87384a1b5600b2b12",
+            "reference": "5c339da0b3979b45dc393bf87384a1b5600b2b12",
+            "shasum": ""
+        },
+        "require": {
+            "bolt/bolt": ">=2.2.0,<3.0.0"
+        },
+        "time": "2015-07-23 15:47:02",
+        "type": "bolt-extension",
+        "installation-source": "dist",
+        "autoload": {
+            "files": [
+                "init.php"
+            ],
+            "psr-4": {
+                "JSONAPI\\": ""
+            }
+        },
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Tobias Dammers",
+                "email": "tobias@twokings.nl"
+            },
+            {
+                "name": "Bob den Otter",
+                "email": "bob@twokings.nl"
+            },
+            {
+                "name": "Xiao-Hu Tai",
+                "email": "xiao@twokings.nl"
+            }
+        ],
+        "description": "Provides simple JSON access to Bolt's internal data structures.",
+        "keywords": [
+            "json"
+        ],
+        "support": {
+            "source": "https://github.com/xiaohutai/jsonapi/tree/2.0.1",
+            "issues": "https://github.com/xiaohutai/jsonapi/issues"
+        }
+    },
+    {
+        "name": "bacboslab/menueditor",
+        "version": "2.2.1",
+        "version_normalized": "2.2.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/bacbos/bolt-menu-editor.git",
+            "reference": "72819c82b8cf3bfe7effa13c29cc8427f4103573"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/bacbos/bolt-menu-editor/zipball/72819c82b8cf3bfe7effa13c29cc8427f4103573",
+            "reference": "72819c82b8cf3bfe7effa13c29cc8427f4103573",
+            "shasum": ""
+        },
+        "require": {
+            "bolt/bolt": ">=2.2.10,<3.0.0"
+        },
+        "time": "2015-09-28 20:07:57",
+        "type": "bolt-extension",
+        "extra": {
+            "bolt-icon": "bolt-menu-editor.png",
+            "branch-alias": {
+                "dev-master": "2.0.*"
+            },
+            "bolt-assets": "assets"
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "files": [
+                "init.php"
+            ],
+            "psr-4": {
+                "Bolt\\Extension\\bacboslab\\menueditor\\": ""
+            }
+        },
+        "authors": [
+            {
+                "name": "Steven Wüthrich / bacbos lab",
+                "email": "hello@bacbos.ch",
+                "homepage": "http://bacbos.ch"
+            }
+        ],
+        "description": "A visual menu editor for Bolt CMS",
+        "keywords": [
+            "admin",
+            "editor",
+            "menu",
+            "tool",
+            "visual"
+        ],
+        "support": {
+            "source": "https://github.com/bacbos/bolt-menu-editor/tree/2.2.1",
+            "issues": "https://github.com/bacbos/bolt-menu-editor/issues"
+        }
+    },
+    {
+        "name": "rossriley/formeditor",
+        "version": "1.2.4",
+        "version_normalized": "1.2.4.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/rossriley/bolt-extension-formeditor.git",
+            "reference": "800a523c15fe85ecfa9cad3973a371dc6ed3daa7"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/rossriley/bolt-extension-formeditor/zipball/800a523c15fe85ecfa9cad3973a371dc6ed3daa7",
+            "reference": "800a523c15fe85ecfa9cad3973a371dc6ed3daa7",
+            "shasum": ""
+        },
+        "require": {
+            "bolt/bolt": ">1.9,<3.0.0",
+            "bolt/boltforms": "^2.2"
+        },
+        "time": "2015-09-10 17:53:10",
+        "type": "bolt-extension",
+        "extra": {
+            "bolt-assets": "assets",
+            "bolt-screenshots": [
+                "screenshot.png",
+                "screenshot2.png"
+            ]
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "files": [
+                "init.php"
+            ],
+            "psr-4": {
+                "Bolt\\Extensions\\Ross\\FormEditor\\": "",
+                "Bolt\\Extensions\\Ross\\FormEditor\\Tests\\": "tests"
+            }
+        },
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Ross Riley",
+                "email": "riley.ross@gmail.com"
+            }
+        ],
+        "description": "An extension to Bolt Forms to provide a basic UI",
+        "keywords": [
+            "boltforms",
+            "editor",
+            "forms",
+            "ui"
+        ],
+        "support": {
+            "source": "https://github.com/rossriley/bolt-extension-formeditor/tree/1.2.4",
+            "issues": "https://github.com/rossriley/bolt-extension-formeditor/issues"
+        }
+    },
+    {
+        "name": "bolt/sitemap",
+        "version": "1.0.5",
+        "version_normalized": "1.0.5.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/bolt/Sitemap.git",
+            "reference": "8c1e250e674431d0bd32d996711eb8462c626af1"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/bolt/Sitemap/zipball/8c1e250e674431d0bd32d996711eb8462c626af1",
+            "reference": "8c1e250e674431d0bd32d996711eb8462c626af1",
+            "shasum": ""
+        },
+        "require": {
+            "bolt/bolt": ">=2.0.0,<3.0.0"
+        },
+        "time": "2016-01-22 09:57:07",
+        "type": "bolt-extension",
+        "extra": {
+            "bolt-icon": "assets/icon-sitemap.png"
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "files": [
+                "init.php"
+            ],
+            "psr-4": {
+                "Bolt\\Extension\\Bolt\\Sitemap\\": ""
+            }
+        },
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Bob den Otter",
+                "email": "bob@twokings.nl"
+            },
+            {
+                "name": "Patrick van Kouteren",
+                "email": "info@wedesignit.nl"
+            }
+        ],
+        "description": "An extension to create XML sitemaps for your Bolt website.",
+        "keywords": [
+            "SEO",
+            "sitemap"
+        ],
+        "support": {
+            "source": "https://github.com/bolt/Sitemap/tree/1.0.5",
+            "issues": "https://github.com/bolt/Sitemap/issues"
+        }
+    }
+]

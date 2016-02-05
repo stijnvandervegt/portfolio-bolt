@@ -1,0 +1,18 @@
+button, a.btn {
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    background: $grey;
+    padding: 16px 22px;
+    display: inline-block;
+    cursor:pointer;
+    color:$white;
+    @include transition(background 0.5s ease-in-out);
+    text-decoration: none;
+    &:hover {
+        background: $backgrounButton;
+        color: $colorButtonHover;
+        text-decoration: none;
+    }
+}
+
