@@ -69,18 +69,75 @@ entries:
             group: media
         video:
             type: video
-    relations:
-        pages:
-          multiple: false
-          order: title
-          label: Select a page
-    taxonomy: [ categories, tags ]
-    record_template: entry.twig
-    listing_template: listing.twig
-    listing_records: 10
     default_status: publish
     sort: -datepublish
-    recordsperpage: 10
+
+# Work
+
+work:
+    name: Work
+    singular_name: Work
+    fields:
+        title:
+            type: text
+            class: large
+            group: content
+        subtitle:
+            type: text
+            uses: title
+        body:
+            type: html
+            height: 300px
+        start_date:
+            type: date
+            options:
+                datepicker:
+                    changeMonth: true
+                    changeYear: true
+                    yearRange: "-100:-0"
+        end_date:
+            type: date
+            options:
+                datepicker:
+                    changeMonth: true
+                    changeYear: true
+                    yearRange: "-100:-0"
+    default_status: publish
+    record_template: work.twig
+    has_sortorder: true
+
+# Education
+
+education:
+    name: Education
+    singular_name: Education
+    fields:
+        title:
+            type: text
+            class: large
+            group: content
+        subtitle:
+            type: text
+            uses: title
+        body:
+            type: html
+            height: 300px
+        start_date:
+            type: date
+            options:
+                datepicker:
+                    changeMonth: true
+                    changeYear: true
+                    yearRange: "-100:-0"
+        end_date:
+            type: date
+            options:
+                datepicker:
+                    changeMonth: true
+                    changeYear: true
+                    yearRange: "-100:-0"
+    default_status: publish
+
 
 # The 'Showcases' is not particularly useful in most cases, but it does a good
 # job of showcasing most of the available fieldtypes. Feel free to delete it, or
@@ -106,26 +163,56 @@ showcases:
             uses: [ title ]
         html:
             type: html
-            options:
-                ckeditor:
-                    height: 400
-                    autoGrow_maxHeight: 400
-                    autoGrow_onStartup: false
-                    uiColor: '#BADA55'
+            height: 150px
         url:
             type: text
+        geolocation:
+            type: geolocation
+            group: Media
+        video:
+            type: video
         image:
             type: image
             attrib: title # Note: retrieve this in your template with {{ record.values.image.title }}
             extensions: [ gif, jpg, png ]
         imagelist:
             type: imagelist
+        file:
+            type: file
+            group: files
+        filelist:
+            type: filelist
+        checkbox:
+            type: checkbox
+            label: "This is a checkbox"
+            group: other
+        datetime:
+            type: datetime
+            default: "2000-01-01"
+            variant: inline
         date:
             type: date
             default: "first day of last month"
             variant: inline
-        showModal:
-            type: checkbox
+        integerfield:
+            type: integer
+            index: true
+        floatfield:
+            type: float
+        selectfield:
+            type: select
+            values: [ none, foo, bar ]
+        multiselect:
+            type: select
+            values: [ A-tuin, Donatello, Rafael, Leonardo, Michelangelo, Koopa, Squirtle ]
+            multiple: true
+            postfix: "Select your favourite turtle(s)."
+        selectentry:
+            type: select
+            values: entries/id,title
+            postfix: "Select an entry"
+            autocomplete: true
+            sort: title
         template:
             type: templateselect
             filter: '*.twig'
@@ -147,6 +234,7 @@ showcases:
     searchable: false
     icon_many: "fa:cubes"
     icon_one: "fa:cube"
+
 
 # Using YAML repeated nodes
 #

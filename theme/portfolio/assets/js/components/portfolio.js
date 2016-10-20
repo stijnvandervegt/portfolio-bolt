@@ -29,10 +29,10 @@ var PortfolioComponent = Vue.component('portfolio', {
     },
     methods: {
         showModal: function(project) {
-            project.showmodal = "1";
+            project.attributes.showModal = true;
         },
         checkModal: function(project) {
-            return project.showmodal == '1' ? true : false;
+            return project.attributes.showModal == '1' ? true : false;
         }
     }
 });

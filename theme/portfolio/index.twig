@@ -45,7 +45,7 @@
         <div class="row">
             <article>
                 {{  page.body }}
-                <a href="" class="btn" target="_blank">{{  __('Prinbaar CV') }}</a>
+                {#<a href="" class="btn" target="_blank">{{  __('Prinbaar CV') }}</a>#}
             </article>
             <figure>
                 <img src="{{ paths.theme }}dist/assets/img/profile.jpg" alt="profile photo"/>
@@ -75,29 +75,9 @@
             <h2>Werkervaring</h2>
             <span class="subtitle">Mijn recente werkgevers</span>
         </header>
-        <div class="row">
-            <div class="work-year">
-                <span>08-2013 - heden</span>
-            </div>
-            <div class="item">
-                <h4>Draad internetprojecten</h4>
-                <h5>Web developer</h5>
 
-                <p>Ontwikkelen van applicaties op basis van Laravel. Custom Wordpress development. Front-end development op basis van Angular. </p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="work-year">
-                <span>01-2012 - 07-2013</span>
-            </div>
-            <div class="item">
-                <h4>Hoteliers</h4>
-                <h5>Web developer</h5>
+        {% include 'work.twig' %}
 
-                <p>Als allround webdeveloper werkzaam voor vele hotelwebsites. Werkzaamheden vooral op het gebied van PHP development en het ontwikkelen van een nieuwe websitebuilder in Zend Framework.
-                    Daarnaast was ik verantwoordelijk voor de doorontwikkeling van een aantal maatwerk projecten zoals en webshops.</p>
-            </div>
-        </div>
     </div>
 </section>
 <section id="education">
@@ -184,31 +164,32 @@
                 </span>
         </div>
 
-        <a href="#portfolio" @click="showModal(project.attributes)" >
-            <img v-bind:src="project.attributes.image.url" alt="${{ project.attributes.name }}">
+        <a href="#portfolio" @click="showModal(project)" >
+            <img v-bind:src="project.attributes.image.url" alt="${{ project.attributes.title }}">
         </a>
         {% verbatim %}
-        <modal :show.sync="checkModal(project.attributes)" :project.sync="project">
+            <modal :show.sync="project.attributes.showModal">
 
-            <h3 slot="header">${{ project.attributes.title }}
-                <a href="#portfolio" class="modal-default-button modal-close" @click="project.attributes.showmodal = false">
+                <h3 slot="header">${{ project.attributes.title }}
+                    <a href="#portfolio" class="modal-default-button modal-close" @click="project.attributes.showModal = false">
 
-                </a>
-            </h3>
-            <div slot="body">
-                <figure>
-                    <img v-bind:src="project.attributes.image.url" alt="${{ project.attributes.title }}">
-                </figure>
-                <div class="content">
-                    <p>{{{ project.attributes.html }}}</p>
+                    </a>
+                </h3>
+                <div slot="body">
+                    <figure>
+                        <img v-bind:src="project.attributes.image.url" alt="${{ project.attributes.title }}">
+                    </figure>
+                    <div class="content">
+                        <p>{{{ project.attributes.html }}}</p>
+                    </div>
                 </div>
-            </div>
-            <div slot="footer">
-                <em>Keywords: {{{ project.attributes.taxonomy.tags }}}</em>
-                <a href="${{ project.attributes.url }}" class="btn" target="_blank">Bekijk het project</a>
+                <div slot="footer">
+                    <em>Keywords: {{{ project.attributes.taxonomy.tags }}}</em>
 
-            </div>
-        </modal>
+                    <a v-if="project.attributes.url" href="${{ project.attributes.url }}" class="btn" target="_blank">Bekijk het project</a>
+
+                </div>
+            </modal>
         {% endverbatim %}
     </div>
 </template>

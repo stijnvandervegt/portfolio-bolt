@@ -1,0 +1,5 @@
+theme/portfolio/node_modules
+.idea/
+files
+app/cache
+vendor/

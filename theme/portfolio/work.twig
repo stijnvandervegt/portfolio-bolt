@@ -1,0 +1,17 @@
+{% setcontent workProjects = 'work' orderby '-start_date' %}
+
+{% for work in workProjects %}
+
+    <div class="row">
+        <div class="work-year">
+            <span>{{ work.start_date|date('m-Y') }} - {{ work.end_date is empty ? "heden" : work.end_date|date("m-Y") }}</span>
+        </div>
+        <div class="item">
+            <h4>{{ work.title }}</h4>
+            <h5>{{ work.subtitle }}</h5>
+
+            <p>{{ work.body }}</p>
+        </div>
+    </div>
+
+{% endfor %}

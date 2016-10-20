@@ -6,7 +6,9 @@ var Portfolio = {
         var self = this;
         jQuery.getJSON('/json/showcases', function(result) {
 
+            console.log(result);
             self.data = self.mapData(result);
+            console.log(self.data);
             callback(self.getData());
 
         }).error(function(error) {
@@ -19,12 +21,22 @@ var Portfolio = {
     mapData: function(result) {
         return _.map(result.data, function(project) {
             var tags = [];
-            _.mapObject(project.attributes.taxonomy.tags, function(val, key) {
-                tags.push(val);
-                return val + 5;
-            });
-            project.attributes.taxonomy.tags = tags;
+
+            if(typeof project.attributes.taxonomy !== 'undefined') {
+
+                _.mapObject(project.attributes.taxonomy.tags, function(val, key) {
+                    tags.push(val);
+                    return val + 5;
+                });
+
+                project.attributes.taxonomy.tags = tags;
+
+            }
+
+            project.attributes.showModal = false;
+
             return project;
+
         })
     }
 
