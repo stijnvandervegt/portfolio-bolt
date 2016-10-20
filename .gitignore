@@ -3,3 +3,4 @@ theme/portfolio/node_modules
 files
 app/cache
 vendor/
+.rocketeer/
